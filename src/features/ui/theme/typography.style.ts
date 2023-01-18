@@ -14,12 +14,12 @@ const allHeadingsStyle = css`
 
 const allParagraphsStyle = css`
   font-family: ${font.base};
-  line-height: 2.4rem;
+  line-height: 2rem;
 `
 
 const allLabelsStyle = css`
   font-family: ${font.base};
-  line-height: 2.4rem;
+  line-height: 2rem;
 `
 
 export const typography = {
@@ -91,6 +91,10 @@ export const typography = {
       ${allLabelsStyle}
       font-size: 1.9rem; // 1.1875
     `,
+    xxLarge: css`
+      ${allLabelsStyle}
+      font-size: 2rem; // 1.25
+    `,
   },
 
   paragraph: {
@@ -125,6 +129,10 @@ export const typography = {
     xLarge: css`
       ${allParagraphsStyle}
       font-size: 1.9rem; // 1.1875
+    `,
+    xxLarge: css`
+      ${allParagraphsStyle}
+      font-size: 2rem; // 1.25
     `,
   },
 }
