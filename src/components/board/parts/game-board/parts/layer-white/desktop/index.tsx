@@ -1,9 +1,9 @@
 import { FC } from 'react'
-import { SVG } from '../styled'
+import { SVG } from '../../styled'
 
-export const BackgroundWhite: FC = () => {
+export const LayerWhiteDesktop: FC = () => {
   return (
-    <SVG width="632" height="584" viewBox="0 0 632 584" fill="none" zIndex={1}>
+    <SVG zIndex={1} width="632" height="584" viewBox="0 0 632 584" fill="none">
       <mask id="path-1-inside-1_5_6178" fill="#fff">
         <path
           fillRule="evenodd"
