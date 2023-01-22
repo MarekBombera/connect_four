@@ -1,13 +1,16 @@
 import { FC } from 'react'
-import { BackgroundBlack } from './parts/background-black'
-import { BackgroundWhite } from './parts/background-white'
+import { Players } from './parts/players'
+import { GameBoard } from './parts/game-board'
+
 import { StyledBoard } from './styled'
 
-export const Board: FC = () => {
+type Props = {}
+
+export const Board: FC<Props> = ({}) => {
   return (
     <StyledBoard>
-      <BackgroundWhite />
-      <BackgroundBlack />
+      <Players />
+      <GameBoard />
     </StyledBoard>
   )
 }
