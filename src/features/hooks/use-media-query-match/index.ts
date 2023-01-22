@@ -1,8 +1,12 @@
+'use client'
+
 import { useState, useEffect } from 'react'
-import { screenSize } from '~/features/ui/theme/mq.style'
+import { breakpoints, screenSize } from '~/features/ui/theme/mq.style'
 
 // Hook is listening for changes in the screen size
 // Breakpoints can match checkBreakpoints() cases or be custom - example: (min-width: 250px)
+
+const { smallOnly, medium, large } = breakpoints
 
 export const useMediaQueryMatch = (mediaQuery: string): boolean => {
   const [isMediaMatch, setIsMediaMatch] = useState<boolean>(false)
@@ -15,11 +19,11 @@ export const useMediaQueryMatch = (mediaQuery: string): boolean => {
 
   const checkBreakpoints = (mediaQuery: string): string => {
     switch (mediaQuery) {
-      case 'smallOnly':
+      case smallOnly:
         return mq.smallOnly
-      case 'medium':
+      case medium:
         return mq.medium
-      case 'large':
+      case large:
         return mq.large
       default:
         return mediaQuery
