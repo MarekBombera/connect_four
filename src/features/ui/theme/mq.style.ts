@@ -1,5 +1,5 @@
 export const screenSize = {
-  medium: 768,
+  medium: 767,
   large: 1366,
   xLarge: 1920,
   xxLarge: 2560,
@@ -11,4 +11,12 @@ export const mq = {
   large: `@media (min-width: ${screenSize.large / 16}em)`,
   xLarge: `@media (min-width: ${screenSize.xLarge / 16}em)`,
   xxLarge: `@media (min-width: ${screenSize.xxLarge / 16}em)`,
+}
+
+export const breakpoints = {
+  smallOnly: 'smallOnly',
+  medium: 'medium',
+  large: 'large',
+  xLarge: 'xLarge',
+  xxLarge: 'xxLarge',
 }
