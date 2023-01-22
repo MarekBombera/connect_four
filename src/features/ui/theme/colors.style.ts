@@ -15,8 +15,6 @@ export const colors = {
     },
   },
 
-  hover: {},
-
   accent: {
     primary: palette.accent.yellow,
     secondary: palette.accent.pink,
