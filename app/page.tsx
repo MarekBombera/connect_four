@@ -1,7 +1,14 @@
 import { NextPage } from 'next'
 
-const Home: NextPage = () => {
-  return <></>
+import { MainMenu } from './parts/main-menu'
+import { StyledHomePage } from './styled'
+
+const HomePage: NextPage = () => {
+  return (
+    <StyledHomePage>
+      <MainMenu />
+    </StyledHomePage>
+  )
 }
 
-export default Home
+export default HomePage
