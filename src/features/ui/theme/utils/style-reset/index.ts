@@ -14,4 +14,5 @@ export const StyleReset = css`
   appearance: none;
   border-radius: 0;
   background: none;
+  outline: none;
 `
