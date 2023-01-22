@@ -18,7 +18,7 @@ export const StyleGameMenu = styled.div`
   background: ${colors.background.secondary};
 
   ${mq.medium} {
-    width: 48rem;
+    width: 45rem;
     padding: 5rem 4rem;
   }
 `
