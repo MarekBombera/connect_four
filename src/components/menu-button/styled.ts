@@ -43,7 +43,8 @@ export const MenuLink = styled(Link)<Props>`
   align-content: center;
   height: 7rem;
   padding: 0 1.6rem;
-  ${typography.label.xLarge}
+  ${typography.label.xxLarge}
+  font-size: 2.2rem;
   font-weight: 700;
   text-transform: uppercase;
   color: ${({ color }) => (color ? color : colors.text.primary)};
