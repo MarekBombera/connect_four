@@ -5,6 +5,7 @@ import { mq } from 'src/features/ui/theme/mq.style'
 import { ShadowEffect } from 'src/features/ui/theme/utils/shadow-effect'
 import styled from 'styled-components'
 import { MenuButton, MenuLink } from '~/components/menu-button/styled'
+import { Routes } from '~/features/constants/routes'
 
 export const StyledMainMenu = styled.main`
   position: absolute;
@@ -32,7 +33,9 @@ export const MainMenuButton = styled(MenuButton)`
   }
 `
 
-const LinkTemplate = styled(MenuLink).attrs({})`
+const LinkTemplate = styled(MenuLink).attrs({
+  background: colors.accent.secondary,
+})`
   width: 33.5rem;
   text-align: left;
 
@@ -41,6 +44,10 @@ const LinkTemplate = styled(MenuLink).attrs({})`
   }
 `
 
-export const MultiPlayer = styled(LinkTemplate).attrs({
-  href: '/game/pvp-local',
+export const MultiPlayerLocal = styled(LinkTemplate).attrs({
+  href: Routes.game.multiplayer.local,
+})``
+
+export const MultiPlayerOnline = styled(LinkTemplate).attrs({
+  href: Routes.game.multiplayer.online,
 })``
