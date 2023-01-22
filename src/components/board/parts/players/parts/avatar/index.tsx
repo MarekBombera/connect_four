@@ -3,9 +3,9 @@ import { PlayerOneIcon } from './icons/player-one'
 import { PlayerTwoIcon } from './icons/player-two'
 
 type Props = {
-  playerTwo?: boolean
+  isPlayerTwo?: boolean
 }
 
-export const Avatar: FC<Props> = ({ playerTwo }) => {
-  return <>{playerTwo ? <PlayerTwoIcon /> : <PlayerOneIcon />}</>
+export const Avatar: FC<Props> = ({ isPlayerTwo }) => {
+  return <>{isPlayerTwo ? <PlayerTwoIcon /> : <PlayerOneIcon />}</>
 }
