@@ -9,7 +9,13 @@ export const colors = {
   background: {
     primary: palette.background.purple,
     secondary: palette.background.purpleDark,
+
+    hover: {
+      secondary: palette.hover.purpleDark,
+    },
   },
+
+  hover: {},
 
   accent: {
     primary: palette.accent.yellow,

@@ -11,6 +11,10 @@ export const palette = {
     purpleDark: 'rgb(121, 69, 255)',
   },
 
+  hover: {
+    purpleDark: 'rgba(92, 45, 213, 1)',
+  },
+
   // Accent colors
   accent: {
     yellow: 'rgb(253, 102, 135)',
