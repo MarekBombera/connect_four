@@ -1,9 +1,13 @@
 import { FC } from 'react'
 import { SVG } from './styled'
 
-export const Logo: FC = () => {
+type Props = {
+  margin?: string
+}
+
+export const Logo: FC<Props> = ({ margin }) => {
   return (
-    <SVG viewBox="0 0 58 61" fill="none">
+    <SVG viewBox="0 0 58 61" fill="none" margin={margin}>
       <g filter="url(#a)">
         <circle cx="13" cy="13" r="10" fill="#FD6687" />
         <circle cx="13" cy="13" r="11.5" stroke="#000" strokeWidth="3" />

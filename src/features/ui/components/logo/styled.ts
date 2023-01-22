@@ -3,7 +3,12 @@
 import styled from 'styled-components'
 import { mq } from '../../theme/mq.style'
 
-export const SVG = styled.svg`
+type Props = {
+  margin?: string
+}
+
+export const SVG = styled.svg<Props>`
+  margin: ${({ margin }) => (margin ? margin : '0')};
   justify-self: center;
   width: 4rem;
   height: 4rem;
