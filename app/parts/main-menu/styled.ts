@@ -51,3 +51,8 @@ export const MultiPlayerLocal = styled(LinkTemplate).attrs({
 export const MultiPlayerOnline = styled(LinkTemplate).attrs({
   href: Routes.game.multiplayer.online,
 })``
+
+export const Rules = styled(LinkTemplate).attrs({
+  href: Routes.rules,
+  background: colors.basic.white,
+})``

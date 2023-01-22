@@ -1,9 +1,9 @@
 import { FC } from 'react'
 import { Logo } from '~/features/ui/components/logo'
 import {
-  MainMenuButton,
   MultiPlayerLocal,
   MultiPlayerOnline,
+  Rules,
   StyledMainMenu,
 } from './styled'
 
@@ -13,7 +13,7 @@ export const MainMenu: FC = () => {
       <Logo margin="0 0 3rem" />
       <MultiPlayerLocal>Multiplayer - Local</MultiPlayerLocal>
       <MultiPlayerOnline> Multiplayer - Online</MultiPlayerOnline>
-      <MainMenuButton>Game rules</MainMenuButton>
+      <Rules>Game rules</Rules>
     </StyledMainMenu>
   )
 }
