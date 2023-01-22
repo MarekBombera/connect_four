@@ -1,4 +1,5 @@
-import StyledComponentsRegistry from '~/features/ui/theme/registry'
+import { GlobalStyles } from 'src/features/ui/theme/global.style'
+import StyledComponentsRegistry from 'src/features/ui/theme/registry'
 
 export default function RootLayout({
   children,
@@ -7,20 +8,11 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="true"
-        />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap"
-          rel="stylesheet"
-        />
-      </head>
       <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
+        <StyledComponentsRegistry>
+          <GlobalStyles />
+          {children}
+        </StyledComponentsRegistry>
       </body>
     </html>
   )
