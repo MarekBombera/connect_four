@@ -1,8 +1,9 @@
-import { FC, SVGProps } from 'react'
+import { FC } from 'react'
+import { SVG } from './styled'
 
-export const Logo: FC = (props: SVGProps<SVGSVGElement>) => {
+export const Logo: FC = () => {
   return (
-    <svg width="58" height="61" viewBox="0 0 58 61" fill="none" {...props}>
+    <SVG viewBox="0 0 58 61" fill="none">
       <g filter="url(#a)">
         <circle cx="13" cy="13" r="10" fill="#FD6687" />
         <circle cx="13" cy="13" r="11.5" stroke="#000" strokeWidth="3" />
@@ -129,6 +130,6 @@ export const Logo: FC = (props: SVGProps<SVGSVGElement>) => {
           />
         </filter>
       </defs>
-    </svg>
+    </SVG>
   )
 }
