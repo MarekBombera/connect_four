@@ -2,7 +2,7 @@ import { NextPage } from 'next'
 import { Board } from '~/components/board'
 import { GameNavigation } from '~/components/game-navigation'
 
-const PvpLocalPage: NextPage = () => {
+const MultiplayerLocalPage: NextPage = () => {
   return (
     <>
       <GameNavigation />
@@ -11,4 +11,4 @@ const PvpLocalPage: NextPage = () => {
   )
 }
 
-export default PvpLocalPage
+export default MultiplayerLocalPage
