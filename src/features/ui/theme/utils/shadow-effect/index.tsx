@@ -8,6 +8,11 @@ export const ShadowEffect = css`
   border-radius: 2rem;
   box-shadow: 0 1rem 0 ${colors.basic.black};
 `
+export const ShadowEffectHover = css`
+  border: 0.3rem solid ${colors.background.hover.secondary};
+  box-shadow: 0 1rem 0 ${colors.background.hover.secondary};
+`
+
 export const ShadowEffectButton = css`
   border: 0.3rem solid ${colors.basic.black};
   box-shadow: 0 0.5rem 0 ${colors.basic.black};
