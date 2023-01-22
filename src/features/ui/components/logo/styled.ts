@@ -4,6 +4,7 @@ import styled from 'styled-components'
 import { mq } from '../../theme/mq.style'
 
 export const SVG = styled.svg`
+  justify-self: center;
   width: 4rem;
   height: 4rem;
 
