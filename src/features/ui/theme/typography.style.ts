@@ -1,7 +1,5 @@
 import { css } from 'styled-components'
 
-import { mq } from './mq.style'
-
 export const font = {
   headings: 'Space Grotesk Bold, sans-serif',
   base: 'Space Grotesk, sans-serif  ',
@@ -9,7 +7,7 @@ export const font = {
 
 const allHeadingsStyle = css`
   font-family: ${font.headings};
-  line-height: 4.8rem;
+  line-height: 7.1rem;
 `
 
 const allParagraphsStyle = css`
@@ -26,35 +24,19 @@ export const typography = {
   heading: {
     h1: css`
       ${allHeadingsStyle};
-      font-size: 2.2rem;
-
-      ${mq.medium} {
-        font-size: 2.8rem;
-      }
+      font-size: 5.6rem;
     `,
     h2: css`
       ${allHeadingsStyle}
-      font-size: 2.4rem;
-
-      ${mq.medium} {
-        font-size: 2.8rem;
-      }
+      font-size: 5.6rem;
     `,
     h3: css`
       ${allHeadingsStyle}
-      font-size: 2rem;
-
-      ${mq.medium} {
-        font-size: 2.2rem;
-      }
+      font-size: 5.6rem;
     `,
     h4: css`
       ${allHeadingsStyle}
-      font-size: 1.8rem;
-
-      ${mq.medium} {
-        font-size: 1.8rem;
-      }
+      font-size: 5.6rem;
     `,
   },
 
