@@ -10,9 +10,11 @@ export const GlobalStyles = createGlobalStyle`
   *::after {
     box-sizing: border-box;
     margin: 0;
+
   }
   html {
     font-size: 62.5%;
+
   }
   body {
     margin: 0;
@@ -21,7 +23,9 @@ export const GlobalStyles = createGlobalStyle`
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-smooth: always;
+
   }
+  
   a {
   color: inherit;
   text-decoration: none;

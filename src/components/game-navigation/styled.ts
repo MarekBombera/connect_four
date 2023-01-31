@@ -19,6 +19,10 @@ export const StyledGameNavigation = styled.nav`
   ${mq.medium} {
     width: min(100%, 63.2rem);
   }
+
+  ${mq.large} {
+    padding: 4rem 0;
+  }
 `
 
 const Button = styled(ButtonTemplate)`
@@ -26,6 +30,8 @@ const Button = styled(ButtonTemplate)`
   padding: 0.8rem 1.9rem;
   ${typography.label.medium}
   text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 0.02rem;
   color: ${colors.basic.white};
   background: ${colors.background.primary};
   border: 0.3rem solid rgba(0, 0, 0, 0);

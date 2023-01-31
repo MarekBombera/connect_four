@@ -25,12 +25,9 @@ export const StyleGameMenu = styled.div`
 
 export const Title = styled.h1`
   margin-bottom: 1.5rem;
-  ${typography.label.xxLarge}
+  ${typography.heading.h1}
   text-transform: uppercase;
   text-align: center;
-  font-weight: 700;
-  font-size: 5.6rem;
-  line-height: 7.1rem;
   color: ${colors.basic.white};
 `
 const ButtonTemplate = styled(MenuButton)`

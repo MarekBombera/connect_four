@@ -36,10 +36,7 @@ export const StyledRules = styled.div`
 
 export const Title = styled.h1`
   margin-bottom: 3rem;
-  ${typography.label.xxLarge}
-  font-weight: 700;
-  font-size: 5.6rem;
-  line-height: 7.1rem;
+  ${typography.heading.h1}
   text-align: center;
   text-transform: uppercase;
   color: ${colors.basic.black};
