@@ -58,9 +58,9 @@ export const Score = styled.b<Props>`
   ${LineClamp_One}
   ${typography.label.medium}
   text-align: start;
-  color: ${colors.basic.black};
   font-size: 3.2rem;
   line-height: 4.1rem;
+  color: ${colors.basic.black};
 
   ${mq.medium} {
     font-size: 5.6rem;

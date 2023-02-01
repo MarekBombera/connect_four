@@ -11,7 +11,9 @@ type Props = {
 }
 
 export const Player = styled.div<Props>`
-  ${ShadowEffect}
+  ${ShadowEffect};
+  grid-row: 1/1;
+  justify-self: ${({ isPlayerTwo }) => (isPlayerTwo ? 'start' : 'end')};
   position: relative;
   display: flex;
   flex-direction: column;
