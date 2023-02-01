@@ -14,6 +14,7 @@ export type Score = {
   draw: number
 }
 
-export type BoardRow = Array<null | Player1 | Player2>
+export type CellValue = Player1 | Player2 | null
+export type BoardRow = Array<CellValue>
 export type EmptyBoard = Array<Array<null>>
 export type Board = Array<BoardRow>
