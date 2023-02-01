@@ -1,10 +1,11 @@
 import { FC } from 'react'
+import { zIndex } from '~/components/board/styled'
 import { SVG } from '../../styled'
 
 export const LayerWhiteMobile: FC = () => {
   return (
     <SVG
-      zIndex={1}
+      zIndex={zIndex.LAYER_WHITE}
       width="335"
       height="310"
       viewBox="0 0 335 310"

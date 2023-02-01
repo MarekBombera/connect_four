@@ -1,22 +1,28 @@
 import { FC } from 'react'
+import { CellValue, Winner } from '~/features/game-logic/types'
 import { DiscIcon } from './icon'
 import { CellButton } from './styled'
 
 type Props = {
-  player: number | null
+  cellValue: CellValue
   columnIndex: number
-  play: Function
+  winner: Winner
+  play: (col: number) => void
 }
 
-export const Cell: FC<Props> = ({ player, columnIndex, play }) => {
+export const Cell: FC<Props> = ({ cellValue, columnIndex, winner, play }) => {
   const handlePlay = () => {
-    if (player === null) play(columnIndex)
+    if (cellValue === null) play(columnIndex)
   }
 
   return (
     <>
-      <CellButton onClick={handlePlay}>
-        {player && <DiscIcon player={player} />}
+      <CellButton
+        disabled={winner !== null}
+        onClick={handlePlay}
+        winner={winner}
+      >
+        {cellValue && <DiscIcon cellValue={cellValue} />}
       </CellButton>
     </>
   )

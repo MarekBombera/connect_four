@@ -1,12 +1,14 @@
 import { FC } from 'react'
+import { player1 } from '~/features/game-logic/constants'
+import { CellValue } from '~/features/game-logic/types'
 import { colors } from '~/features/ui/theme/colors.style'
 import { SVG } from './styled'
 
 type Props = {
-  player: number | null
+  cellValue: CellValue
 }
 
-export const DiscIcon: FC<Props> = ({ player }) => {
+export const DiscIcon: FC<Props> = ({ cellValue }) => {
   const {
     accent: { primary, secondary },
   } = colors
@@ -21,7 +23,7 @@ export const DiscIcon: FC<Props> = ({ player }) => {
             cx="35"
             cy="35"
             r="32"
-            fill={player === 1 ? primary : secondary}
+            fill={cellValue === player1 ? primary : secondary}
           />
         </g>
       </g>

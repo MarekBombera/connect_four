@@ -1,18 +1,25 @@
 import { FC } from 'react'
-import { BoardRow } from '~/features/game-logic/types'
+import { BoardRow, Winner } from '~/features/game-logic/types'
 
 import { Cell } from './parts/cell'
 
 type RowProps = {
   row: BoardRow
+  winner: Winner
   play: (col: number) => void
 }
 
-export const Row: FC<RowProps> = ({ row, play }) => {
+export const Row: FC<RowProps> = ({ row, winner, play }) => {
   return (
     <>
       {row.map((cell, index) => (
-        <Cell key={index} player={cell} columnIndex={index} play={play} />
+        <Cell
+          key={index}
+          cellValue={cell}
+          columnIndex={index}
+          winner={winner}
+          play={play}
+        />
       ))}
     </>
   )

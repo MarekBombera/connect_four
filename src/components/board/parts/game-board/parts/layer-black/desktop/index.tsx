@@ -1,9 +1,16 @@
 import { FC } from 'react'
+import { zIndex } from '~/components/board/styled'
 import { SVG } from '../../styled'
 
 export const LayerBlackDesktop: FC = () => {
   return (
-    <SVG zIndex={0} width="632" height="594" viewBox="0 0 632 594" fill="none">
+    <SVG
+      zIndex={zIndex.LAYER_BLACK}
+      width="632"
+      height="594"
+      viewBox="0 0 632 594"
+      fill="none"
+    >
       <g id="Shape" filter="url(#filter0_d_5_6224)">
         <mask id="path-1-inside-1_5_6224" fill="#fff">
           <path

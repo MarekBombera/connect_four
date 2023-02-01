@@ -1,7 +1,6 @@
 'use client'
 
 import styled from 'styled-components'
-import { mq } from '~/features/ui/theme/mq.style'
 
 type Props = {
   zIndex: number
@@ -9,14 +8,8 @@ type Props = {
 
 export const SVG = styled.svg<Props>`
   position: absolute;
-  top: 12.5rem;
+  left: 0;
+  top: 0;
   z-index: ${({ zIndex }) => zIndex};
-
-  ${mq.medium} {
-    top: 13rem;
-  }
-
-  ${mq.large} {
-    top: 0;
-  }
+  pointer-events: none;
 `
