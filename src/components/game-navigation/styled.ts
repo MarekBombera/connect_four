@@ -8,6 +8,7 @@ import { typography } from '~/features/ui/theme/typography.style'
 import { ShadowEffectButton } from '~/features/ui/theme/utils/shadow-effect'
 
 export const StyledGameNavigation = styled.nav`
+  align-self: end;
   display: grid;
   grid-template-columns: repeat(3, auto);
   justify-content: space-between;
@@ -21,7 +22,7 @@ export const StyledGameNavigation = styled.nav`
   }
 
   ${mq.large} {
-    padding: 4rem 0;
+    padding: 6rem 0;
   }
 `
 

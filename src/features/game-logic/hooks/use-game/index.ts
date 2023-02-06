@@ -37,8 +37,6 @@ export const useGame = () => {
 
       const result = checkForWin(board)
 
-      console.log(result)
-
       switch (result) {
         case player1:
           dispatch(player1WinsAction(gameState, board))
