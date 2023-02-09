@@ -6,15 +6,21 @@ import { SVG } from './styled'
 
 type Props = {
   cellValue: CellValue
+  rowIndex: number
 }
 
-export const DiscIcon: FC<Props> = ({ cellValue }) => {
+export const DiscIcon: FC<Props> = ({ cellValue, rowIndex }) => {
   const {
     accent: { primary, secondary },
   } = colors
 
   return (
-    <SVG viewBox="0 0 70 75" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <SVG
+      viewBox="0 0 70 75"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg"
+      rowIndex={rowIndex}
+    >
       <g id="counter-red-large">
         <circle id="Oval Copy 41" cx="35" cy="35" r="35" fill="black" />
         <circle id="Oval Copy 42" cx="35" cy="40" r="35" fill="black" />

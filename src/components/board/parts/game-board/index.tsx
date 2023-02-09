@@ -24,7 +24,13 @@ export const GameBoard: FC<Props> = ({ gameState, play }) => {
   return (
     <StyledGameBoard>
       {gameState.board.map((row, index) => (
-        <Row key={index} row={row} winner={gameState.winner} play={play} />
+        <Row
+          key={index}
+          row={row}
+          rowIndex={index}
+          winner={gameState.winner}
+          play={play}
+        />
       ))}
       {isSmallOnly ? <LayerWhiteMobile /> : <LayerWhiteDesktop />}
       {isSmallOnly ? <LayerBlackMobile /> : <LayerBlackDesktop />}

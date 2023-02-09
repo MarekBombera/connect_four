@@ -6,23 +6,29 @@ import { CellButton } from './styled'
 type Props = {
   cellValue: CellValue
   columnIndex: number
+  rowIndex: number
   winner: Winner
   play: (col: number) => void
 }
 
-export const Cell: FC<Props> = ({ cellValue, columnIndex, winner, play }) => {
-  const handlePlay = () => {
-    if (cellValue === null) play(columnIndex)
-  }
+export const Cell: FC<Props> = ({
+  cellValue,
+  columnIndex,
+  rowIndex,
+  winner,
+  play,
+}) => {
+  const handlePlay = () => !cellValue && play(columnIndex)
 
   return (
     <>
       <CellButton
-        disabled={winner !== null}
+        disabled={winner !== null || cellValue !== null}
         onClick={handlePlay}
         winner={winner}
+        cellValue={cellValue}
       >
-        {cellValue && <DiscIcon cellValue={cellValue} />}
+        {cellValue && <DiscIcon cellValue={cellValue} rowIndex={rowIndex} />}
       </CellButton>
     </>
   )
