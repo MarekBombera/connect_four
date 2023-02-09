@@ -29,7 +29,7 @@ export const GameBottomSection: FC<Props> = ({
           togglePlayerTimesUp={togglePlayerTimesUp}
         />
       )}
-      <Background />
+      <Background winner={winner} />
     </StyleGameBottomSection>
   )
 }

@@ -1,5 +1,5 @@
 'use client'
-import { FC } from 'react'
+import type { FC } from 'react'
 import { Players } from './parts/players'
 import { GameBoard } from './parts/game-board'
 
