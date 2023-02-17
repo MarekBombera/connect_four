@@ -1,6 +1,7 @@
 'use client'
 
 import styled from 'styled-components'
+import { colors } from '~/features/ui/theme/colors.style'
 
 import { mq } from '~/features/ui/theme/mq.style'
 
@@ -12,6 +13,7 @@ export const StyleGameBottomSection = styled.section`
   padding-bottom: 2rem;
   height: 100%;
 
+  background: ${colors.background.secondary};
   ${mq.medium} {
     padding-bottom: 0;
   }

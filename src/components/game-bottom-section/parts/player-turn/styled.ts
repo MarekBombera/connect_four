@@ -14,8 +14,7 @@ export const StyledPlayerTurn = styled.div<Props>`
   place-items: center;
   align-content: center;
   top: -1rem;
-  width: 19.5rem;
-  height: 15rem;
+  height: 17.3rem;
   gap: 0.2rem;
   z-index: ${zIndex.PLAYER_TURN};
 

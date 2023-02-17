@@ -22,7 +22,7 @@ export const StyledGameNavigation = styled.nav`
   }
 
   ${mq.large} {
-    padding: 6rem 0;
+    padding: 2rem 0 6rem;
   }
 `
 
@@ -40,8 +40,8 @@ const Button = styled(ButtonTemplate)`
 
   &:hover {
     ${ShadowEffectButton};
-    translate: 0 -0.2rem;
     background: ${colors.accent.primary};
+    translate: 0 -0.2rem;
   }
 `
 export const MenuButton = styled(Button)``

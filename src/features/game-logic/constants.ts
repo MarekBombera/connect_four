@@ -14,7 +14,7 @@ export const emptyBoard: EmptyBoard = Array.from({ length: 6 }, () =>
 export const initialGameState = {
   player1,
   player2,
-  currentPlayer: 1,
+  currentPlayer: player1,
   board: emptyBoard,
   gameOver: false,
   winner: null,
