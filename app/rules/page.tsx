@@ -14,7 +14,7 @@ import {
 
 const RulesPage: NextPage = () => {
   const renderedList = rules.map((rule, index) => {
-    return <Li key={rule} ruleNumber={index} rule={rule} />
+    return <Li key={rule} ruleNumber={index + 1} rule={rule} />
   })
 
   return (
