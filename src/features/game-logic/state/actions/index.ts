@@ -70,16 +70,3 @@ export const togglePlayerAction = (
     board,
   }
 }
-
-export const togglePlayerTimesUpAction = (
-  gameState: GameState
-): TogglePlayerAction => {
-  const { player1, player2, currentPlayer } = gameState
-
-  const nextPlayer = currentPlayer === player1 ? player2 : player1
-  return {
-    type: TOGGLE_PLAYER,
-    currentPlayer: nextPlayer,
-    board: gameState.board,
-  }
-}
