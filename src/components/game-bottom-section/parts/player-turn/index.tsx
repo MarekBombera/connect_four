@@ -16,11 +16,11 @@ export const PlayerTurn: FC<Props> = ({
   currentPlayer,
   togglePlayerTimesUp,
 }) => {
-  const { turnTimer, setTurnTimer, isTimeUp } = usePlayerTurnTimer()
+  const { turnTimer, setTurnTimer, isTimerZero } = usePlayerTurnTimer()
 
   useEffect(() => {
-    isTimeUp && togglePlayerTimesUp()
-  }, [isTimeUp, togglePlayerTimesUp])
+    isTimerZero && togglePlayerTimesUp()
+  }, [isTimerZero, togglePlayerTimesUp])
 
   useEffect(() => {
     setTurnTimer(DEFAULT_TURN_TIME)
