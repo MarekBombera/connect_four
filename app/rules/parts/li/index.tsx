@@ -1,16 +1,16 @@
 import { FC } from 'react'
-import { Index, StyledLi, Text } from './styled'
+import { StyledLi, RuleNumber, Rule } from './styled'
 
 type Props = {
-  index: number
-  text: string
+  ruleNumber: number
+  rule: string
 }
 
-export const Li: FC<Props> = ({ index, text }) => {
+export const Li: FC<Props> = ({ ruleNumber, rule }) => {
   return (
     <StyledLi>
-      <Index>{index}</Index>
-      <Text>{text}</Text>
+      <RuleNumber>{ruleNumber}</RuleNumber>
+      <Rule>{rule}</Rule>
     </StyledLi>
   )
 }

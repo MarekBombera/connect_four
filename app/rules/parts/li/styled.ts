@@ -9,12 +9,12 @@ export const StyledLi = styled.li`
   grid-template-columns: 2.5rem auto;
   width: 100%;
 `
-export const Index = styled.b`
+export const RuleNumber = styled.b`
   ${typography.paragraph.medium}
   color: ${colors.basic.black};
 `
 
-export const Text = styled.p`
+export const Rule = styled.p`
   ${typography.paragraph.medium}
   color: ${colors.basic.black};
   opacity: 0.66;

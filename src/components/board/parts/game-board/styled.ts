@@ -3,7 +3,7 @@
 import styled from 'styled-components'
 import { mq } from '~/features/ui/theme/mq.style'
 
-export const StyledGameBoard = styled.table`
+export const StyledGameBoard = styled.div`
   grid-row: 2/2;
   grid-column: 1/-1;
   position: relative;

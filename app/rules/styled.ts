@@ -6,23 +6,15 @@ import { Routes } from '~/features/constants/routes'
 import { colors } from '~/features/ui/theme/colors.style'
 import { mq } from '~/features/ui/theme/mq.style'
 import { typography } from '~/features/ui/theme/typography.style'
-import {
-  ShadowEffect,
-  ShadowEffectHover,
-} from '~/features/ui/theme/utils/shadow-effect'
+import { ShadowEffect } from '~/features/ui/theme/utils/shadow-effect'
 import { StyleReset } from '~/features/ui/theme/utils/style-reset'
 
 export const StyledRulesLayout = styled.div`
   display: grid;
   place-items: center;
-  width: 100%;
   height: 100vh;
-  padding: 2rem 2rem 4rem;
+  padding: 0 2rem;
   background: ${colors.background.secondary};
-
-  ${mq.medium} {
-    padding-bottom: 6rem;
-  }
 `
 
 export const StyledRules = styled.div`
@@ -32,6 +24,10 @@ export const StyledRules = styled.div`
   width: min(100%, 48rem);
   padding: 3rem 2rem 6rem;
   background: ${colors.basic.white};
+
+  ${mq.medium} {
+    padding: 3rem 3rem 6rem;
+  }
 `
 
 export const Title = styled.h1`
@@ -54,7 +50,7 @@ export const Description = styled.p`
   color: ${colors.basic.black};
   opacity: 0.66;
 `
-export const Ol = styled.ol`
+export const RulesList = styled.ol`
   ${StyleReset}
   display: grid;
   align-items: start;

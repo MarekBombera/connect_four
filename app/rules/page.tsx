@@ -8,13 +8,13 @@ import {
   Label,
   Title,
   Description,
-  Ol,
+  RulesList,
   BackToMainMenu,
 } from './styled'
 
 const RulesPage: NextPage = () => {
   const renderedList = rules.map((rule, index) => {
-    return <Li key={rule[index]} index={index + 1} text={rule} />
+    return <Li key={rule} ruleNumber={index} rule={rule} />
   })
 
   return (
@@ -26,7 +26,7 @@ const RulesPage: NextPage = () => {
         (either vertically, horizontally, or diagonally).
       </Description>
       <Label>How to play</Label>
-      <Ol>{renderedList}</Ol>
+      <RulesList>{renderedList}</RulesList>
       <BackToMainMenu>
         <CheckIcon />
       </BackToMainMenu>

@@ -19,10 +19,9 @@ export const gameReducer = (state: GameState, action: GameAction) => {
     case NEXT_ROUND:
       return {
         ...initialGameState,
-        board: action.board,
-        score: action.score,
         gameOver: false,
         winner: null,
+        score: action.score,
       }
     case TOGGLE_PLAYER:
       return {
