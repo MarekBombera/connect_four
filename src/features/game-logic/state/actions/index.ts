@@ -1,24 +1,19 @@
 import { draw, player1, player2 } from '../../constants'
 import { Board } from '../../types'
-import { generateNewBoard } from '../../utils'
 import { GameState } from '../reducer/types'
-import { EndGameAction, TogglePlayerAction } from './types'
+import { EndGameAction, NextRoundAction, TogglePlayerAction } from './types'
 
-import { NEW_GAME, NEXT_ROUND, END_GAME, TOGGLE_PLAYER } from './constants'
+import { NEW_GAME, NEXT_ROUND, GAME_OVER, TOGGLE_PLAYER } from './constants'
 
-export const restartGameAction = (gameState: GameState) => {
+export const newGameAction = () => {
   return {
     type: NEW_GAME,
-    board: generateNewBoard(),
-    score: { ...gameState.score },
   }
 }
 
-export const nextRoundAction = (gameState: GameState) => {
+export const nextRoundAction = (gameState: GameState): NextRoundAction => {
   return {
     type: NEXT_ROUND,
-    board: generateNewBoard(),
-    winner: null,
     score: { ...gameState.score },
   }
 }
@@ -29,7 +24,7 @@ export const player1WinsAction = (
 ): EndGameAction => {
   const { score } = gameState
   return {
-    type: END_GAME,
+    type: GAME_OVER,
     board,
     winner: player1,
     score: { ...score, player1: score.player1 + 1 },
@@ -42,7 +37,7 @@ export const player2WinsAction = (
 ): EndGameAction => {
   const { score } = gameState
   return {
-    type: END_GAME,
+    type: GAME_OVER,
     board,
     winner: player2,
     score: { ...score, player2: score.player2 + 1 },
@@ -55,7 +50,7 @@ export const drawGameAction = (
 ): EndGameAction => {
   const { score } = gameState
   return {
-    type: END_GAME,
+    type: GAME_OVER,
     board,
     winner: draw,
     score: { ...score, draw: score.draw + 1 },

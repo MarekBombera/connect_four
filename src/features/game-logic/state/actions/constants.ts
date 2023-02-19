@@ -2,9 +2,14 @@ const actionType = {
   NEW_GAME: 'NEW_GAME',
   NEXT_ROUND: 'NEXT_ROUND',
   TOGGLE_PLAYER: 'TOGGLE_PLAYER',
-  END_GAME: 'END_GAME',
+  GAME_OVER: 'GAME_OVER',
   UPDATE_MESSAGE: 'UPDATE_MESSAGE',
 } as const
 
-export const { NEW_GAME, NEXT_ROUND, TOGGLE_PLAYER, END_GAME, UPDATE_MESSAGE } =
-  actionType
+export const {
+  NEW_GAME,
+  NEXT_ROUND,
+  TOGGLE_PLAYER,
+  GAME_OVER,
+  UPDATE_MESSAGE,
+} = actionType

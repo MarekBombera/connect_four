@@ -5,7 +5,7 @@ import {
   nextRoundAction,
   player1WinsAction,
   player2WinsAction,
-  restartGameAction,
+  newGameAction,
   togglePlayerAction,
 } from '../../state/actions'
 import { gameReducer } from '../../state/reducer'
@@ -16,7 +16,7 @@ export const useGame = () => {
 
   const { currentPlayer, gameOver } = gameState
 
-  const restartGame = () => dispatch(restartGameAction(initialGameState))
+  const restartGame = () => dispatch(newGameAction())
 
   const nextRound = () => dispatch(nextRoundAction(gameState))
 

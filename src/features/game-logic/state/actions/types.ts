@@ -1,19 +1,13 @@
-import type { Board, CurrentPlayer, Winner } from '../../types'
-import { END_GAME, NEW_GAME, NEXT_ROUND, TOGGLE_PLAYER } from './constants'
+import type { Board, CurrentPlayer, Score, Winner } from '../../types'
+import { GAME_OVER, NEW_GAME, NEXT_ROUND, TOGGLE_PLAYER } from './constants'
 
 export type NewGameAction = {
   type: typeof NEW_GAME
-  board: Board
 }
 
 export type NextRoundAction = {
   type: typeof NEXT_ROUND
-  board: Board
-  score: {
-    player1: number
-    player2: number
-    draw: number
-  }
+  score: Score
 }
 
 export type TogglePlayerAction = {
@@ -23,14 +17,10 @@ export type TogglePlayerAction = {
 }
 
 export type EndGameAction = {
-  type: typeof END_GAME
+  type: typeof GAME_OVER
   winner: Winner
   board: Board
-  score: {
-    player1: number
-    player2: number
-    draw: number
-  }
+  score: Score
 }
 
 export type GameAction =

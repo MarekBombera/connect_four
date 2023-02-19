@@ -1,26 +1,27 @@
 import { initialGameState } from '../../constants'
+
 import {
-  END_GAME,
   NEW_GAME,
   NEXT_ROUND,
   TOGGLE_PLAYER,
+  GAME_OVER,
 } from '../actions/constants'
 
-import type { GameAction } from '../actions/types'
 import type { GameState } from './types'
+import type { GameAction } from '../actions/types'
 
-export const gameReducer = (state: GameState, action: GameAction) => {
+export const gameReducer = (
+  state: GameState = initialGameState,
+  action: GameAction
+) => {
   switch (action.type) {
     case NEW_GAME:
       return {
         ...initialGameState,
-        board: action.board,
       }
     case NEXT_ROUND:
       return {
         ...initialGameState,
-        gameOver: false,
-        winner: null,
         score: action.score,
       }
     case TOGGLE_PLAYER:
@@ -29,7 +30,7 @@ export const gameReducer = (state: GameState, action: GameAction) => {
         currentPlayer: action.currentPlayer,
         board: action.board,
       }
-    case END_GAME:
+    case GAME_OVER:
       return {
         ...state,
         gameOver: true,

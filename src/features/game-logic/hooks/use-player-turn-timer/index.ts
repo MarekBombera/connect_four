@@ -4,11 +4,12 @@ export const DEFAULT_TURN_TIME = 30
 
 export const usePlayerTurnTimer = (initialTime = DEFAULT_TURN_TIME) => {
   const [turnTimer, setTurnTimer] = useState<number>(initialTime)
+  const isTimerZero = turnTimer === 0
 
   useEffect(() => {
     let timer: NodeJS.Timeout | undefined
 
-    if (turnTimer === 0) {
+    if (isTimerZero) {
       setTurnTimer(initialTime)
     }
 
@@ -17,9 +18,7 @@ export const usePlayerTurnTimer = (initialTime = DEFAULT_TURN_TIME) => {
     }, 1000)
 
     return () => clearInterval(timer)
-  }, [initialTime, turnTimer])
+  }, [initialTime, isTimerZero])
 
-  const isTimeUp = turnTimer === 0
-
-  return { turnTimer, setTurnTimer, isTimeUp }
+  return { turnTimer, setTurnTimer, isTimerZero }
 }
