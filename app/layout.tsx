@@ -1,5 +1,6 @@
 import { GlobalStyles } from 'src/features/ui/theme/global.style'
 import StyledComponentsRegistry from 'src/features/ui/theme/registry'
+import { SpaceGroteskFont } from '~/features/ui/theme/fonts'
 
 export default function RootLayout({
   children,
@@ -8,7 +9,7 @@ export default function RootLayout({
 }) {
   return (
     <html>
-      <body>
+      <body className={SpaceGroteskFont.className}>
         <StyledComponentsRegistry>
           <GlobalStyles />
           {children}
