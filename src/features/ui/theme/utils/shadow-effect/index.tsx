@@ -49,6 +49,14 @@ const clickSecondary = css`
   box-shadow: 0 0.1rem 0 ${colors.basic.black};
   translate: 0 0.1rem;
 `
+const outlinePrimary = css`
+  ${defaultBorder}
+  box-shadow: 0 0.01rem 0 ${colors.basic.black};
+`
+const outlineSecondary = css`
+  border: 0.3rem solid rgba(0, 0, 0, 0.3);
+`
+
 export const ShadowEffect = {
   primary,
   secondary,
@@ -59,5 +67,14 @@ export const ShadowEffect = {
   active: {
     primary: clickPrimary,
     secondary: clickSecondary,
+  },
+
+  outline: {
+    primary: outlinePrimary,
+    secondary: outlineSecondary,
+  },
+
+  others: {
+    defaultBorderRadius,
   },
 }

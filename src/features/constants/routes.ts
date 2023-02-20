@@ -1,6 +1,7 @@
 export const Routes = {
   home: '/',
   rules: '/rules',
+  profile: '/profile',
 
   game: {
     multiplayer: {
