@@ -5,11 +5,12 @@ export const loading = keyframes`
 to {
     transform: rotate(360deg);
 }
-
 `
 
 type SpinnerProps = {
   margin?: string
+  borderColor?: string
+  borderTopColor?: string
 }
 
 export const Spinner = styled.div<SpinnerProps>`
@@ -20,8 +21,9 @@ export const Spinner = styled.div<SpinnerProps>`
     content: '';
     width: 5rem;
     height: 5rem;
-    border: 0.7rem solid #dddd;
-    border-top-color: #000;
+    border: ${({ borderColor }) =>
+      borderColor ?? ` 0.7rem solid ${colors.basic.white}`};
+    border-top-color: ${({ color }) => color ?? colors.accent.primary};
     border-radius: 50%;
     animation: ${loading} 0.75s linear infinite;
   }
