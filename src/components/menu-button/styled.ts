@@ -48,7 +48,6 @@ export const MenuLink = styled(Link)<Props>`
   color: ${({ color }) => (color ? color : colors.text.primary)};
   background: ${({ background }) =>
     background ? background : colors.basic.white};
-  border: 0.3rem solid ${colors.basic.black};
   ${ShadowEffect.primary};
   transition: all 0.2s ease-out;
   cursor: pointer;

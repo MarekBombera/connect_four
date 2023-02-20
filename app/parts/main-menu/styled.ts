@@ -4,7 +4,7 @@ import { colors } from 'src/features/ui/theme/colors.style'
 import { mq } from 'src/features/ui/theme/mq.style'
 import { ShadowEffect } from 'src/features/ui/theme/utils/shadow-effect'
 import styled from 'styled-components'
-import { MenuButton, MenuLink } from '~/components/menu-button/styled'
+import { MenuLink } from '~/components/menu-button/styled'
 import { Routes } from '~/features/constants/routes'
 
 export const StyledMainMenu = styled.main`
@@ -21,14 +21,6 @@ export const StyledMainMenu = styled.main`
     padding: 7rem 4rem 6rem;
     background: ${colors.background.secondary};
     ${ShadowEffect.primary};
-  }
-`
-export const MainMenuButton = styled(MenuButton)`
-  width: 33.5rem;
-  text-align: left;
-
-  ${mq.medium} {
-    width: 40rem;
   }
 `
 
