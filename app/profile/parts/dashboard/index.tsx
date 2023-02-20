@@ -1,3 +1,5 @@
+'use client'
+
 import { FC } from 'react'
 import { useAuth } from '~/features/auth/hooks/use-auth'
 import { Avatar, Info, Label, ProfileInfo, StyledDashboard } from './styled'

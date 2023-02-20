@@ -1,5 +1,3 @@
-'use client'
-
 import type { User } from 'firebase/auth'
 import { useEffect, useState } from 'react'
 

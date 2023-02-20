@@ -11,21 +11,27 @@ export const StyledDashboard = styled.main`
   position: absolute;
   display: grid;
   width: min(100%, 50rem);
-  gap: 2rem;
   padding: 3.5rem 3rem;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   background: ${colors.background.secondary};
-  ${ShadowEffect.primary}
+  ${ShadowEffect.primary};
 
   ${mq.medium} {
   }
 `
+
+export const Avatar = styled(Image)`
+  margin-bottom: 2rem;
+  ${ShadowEffect.outline.primary};
+  ${ShadowEffect.others.defaultBorderRadius};
+`
+
 export const ProfileInfo = styled.div`
   display: grid;
   padding: 1rem 0;
-  gap: 1.2rem;
+  gap: 1rem;
 `
 
 export const Label = styled.b`
@@ -42,9 +48,4 @@ export const Info = styled.span`
   background: ${colors.background.primary};
   border-radius: 1.5rem;
   ${ShadowEffect.outline.secondary};
-`
-
-export const Avatar = styled(Image)`
-  ${ShadowEffect.outline.primary}
-  ${ShadowEffect.others.defaultBorderRadius}
 `

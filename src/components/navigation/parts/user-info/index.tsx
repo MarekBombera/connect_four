@@ -1,3 +1,5 @@
+'use client'
+
 import { FC } from 'react'
 import { useAuth } from '~/features/auth/hooks/use-auth'
 import { ButtonSpinner } from '~/features/ui/components/spinner/styled'
