@@ -3,14 +3,10 @@
 import styled from 'styled-components'
 import { colors } from 'src/features/ui/theme/colors.style'
 import { typography } from 'src/features/ui/theme/typography.style'
-import {
-  ShadowEffect,
-  ShadowEffectHover,
-} from 'src/features/ui/theme/utils/shadow-effect'
+import { ShadowEffect } from 'src/features/ui/theme/utils/shadow-effect'
 import { ButtonTemplate } from '~/features/ui/components/button/styled'
 import Link from 'next/link'
 import { StyleReset } from '~/features/ui/theme/utils/style-reset'
-import { mq } from '~/features/ui/theme/mq.style'
 
 type Props = {
   color?: string
@@ -27,13 +23,15 @@ export const MenuButton = styled(ButtonTemplate)<Props>`
   color: ${({ color }) => (color ? color : colors.text.primary)};
   background: ${({ background }) =>
     background ? background : colors.basic.white};
+  ${ShadowEffect.primary};
   transition: all 0.2s ease-in-out;
-  border: 0.3rem solid ${colors.basic.black};
-  border-radius: 2rem;
 
-  &:hover {
-    translate: 0 -0.2rem;
-    ${ShadowEffectHover};
+  :hover {
+    ${ShadowEffect.hover.primary};
+  }
+
+  :active {
+    ${ShadowEffect.active.primary};
   }
 `
 
@@ -50,18 +48,16 @@ export const MenuLink = styled(Link)<Props>`
   color: ${({ color }) => (color ? color : colors.text.primary)};
   background: ${({ background }) =>
     background ? background : colors.basic.white};
-  transition: all 0.2s ease-in-out;
   border: 0.3rem solid ${colors.basic.black};
-  border-radius: 2rem;
+  ${ShadowEffect.primary};
   transition: all 0.2s ease-out;
   cursor: pointer;
 
-  ${mq.smallOnly} {
-    ${ShadowEffect}
+  :hover {
+    ${ShadowEffect.hover.primary};
   }
 
-  &:hover {
-    translate: 0 -0.2rem;
-    ${ShadowEffectHover};
+  :active {
+    ${ShadowEffect.active.primary};
   }
 `

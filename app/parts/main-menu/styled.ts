@@ -20,8 +20,7 @@ export const StyledMainMenu = styled.main`
     width: 48rem;
     padding: 7rem 4rem 6rem;
     background: ${colors.background.secondary};
-    ${ShadowEffect}
-    border-radius: 2rem;
+    ${ShadowEffect.primary};
   }
 `
 export const MainMenuButton = styled(MenuButton)`

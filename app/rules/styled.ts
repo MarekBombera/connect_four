@@ -18,12 +18,12 @@ export const StyledRulesLayout = styled.div`
 `
 
 export const StyledRules = styled.div`
-  ${ShadowEffect}
   position: relative;
   display: grid;
   width: min(100%, 48rem);
   padding: 3rem 2rem 6rem;
   background: ${colors.basic.white};
+  ${ShadowEffect.primary};
 
   ${mq.medium} {
     padding: 3rem 3rem 6rem;
@@ -60,7 +60,6 @@ export const RulesList = styled.ol`
 export const BackToMainMenu = styled(Link).attrs({
   href: Routes.home,
 })`
-  ${ShadowEffect}
   position: absolute;
   display: grid;
   place-items: center;
@@ -70,6 +69,7 @@ export const BackToMainMenu = styled(Link).attrs({
   width: 6.4rem;
   height: 6.4rem;
   background: ${colors.accent.primary};
+  ${ShadowEffect.primary};
   border-radius: 50%;
   transition: all 0.2s ease-in-out;
 

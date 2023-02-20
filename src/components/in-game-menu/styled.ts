@@ -9,13 +9,13 @@ import { ShadowEffect } from '~/features/ui/theme/utils/shadow-effect'
 import { MenuButton, MenuLink } from '../menu-button/styled'
 
 export const StyleGameMenu = styled.div`
-  ${ShadowEffect}
   display: flex;
   flex-direction: column;
   min-width: 33.5rem;
   gap: 3rem;
   padding: 3rem 2rem;
   background: ${colors.background.secondary};
+  ${ShadowEffect.primary};
 
   ${mq.medium} {
     width: 45rem;
@@ -31,14 +31,14 @@ export const Title = styled.h1`
   color: ${colors.basic.white};
 `
 const ButtonTemplate = styled(MenuButton)`
-  ${ShadowEffect}
   width: 100%;
   text-align: center;
+  ${ShadowEffect.primary};
 `
 export const Continue = styled(ButtonTemplate)``
 export const Restart = styled(ButtonTemplate)``
 export const Quit = styled(MenuLink).attrs({ href: Routes.home })`
-  ${ShadowEffect}
   text-align: center;
   background: ${colors.accent.primary};
+  ${ShadowEffect.primary};
 `

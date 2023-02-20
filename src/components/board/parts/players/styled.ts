@@ -11,7 +11,6 @@ type Props = {
 }
 
 export const Player = styled.div<Props>`
-  ${ShadowEffect};
   grid-row: 1/1;
   justify-self: ${({ isPlayerTwo }) => (isPlayerTwo ? 'start' : 'end')};
   position: relative;
@@ -22,6 +21,7 @@ export const Player = styled.div<Props>`
   width: 14.2rem;
   height: 8rem;
   background: ${colors.basic.white};
+  ${ShadowEffect.primary};
 
   ${mq.medium} {
     width: 27.2rem;

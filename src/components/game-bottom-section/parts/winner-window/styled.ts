@@ -6,15 +6,11 @@ import { ButtonTemplate } from '~/features/ui/components/button/styled'
 import { colors } from '~/features/ui/theme/colors.style'
 import { mq } from '~/features/ui/theme/mq.style'
 import { typography } from '~/features/ui/theme/typography.style'
-import {
-  ShadowEffect,
-  ShadowEffectButton,
-} from '~/features/ui/theme/utils/shadow-effect'
+import { ShadowEffect } from '~/features/ui/theme/utils/shadow-effect'
 
 type Props = {}
 
 export const StyledWinner = styled.div<Props>`
-  ${ShadowEffect}
   position: relative;
   display: grid;
   place-items: center;
@@ -23,6 +19,7 @@ export const StyledWinner = styled.div<Props>`
   padding: 1.7rem 7.4rem;
   background: ${colors.basic.white};
   z-index: ${zIndex.WINNER};
+  ${ShadowEffect.primary};
 
   ${mq.medium} {
     top: -3.5rem;
@@ -52,12 +49,13 @@ export const PlayAgain = styled(ButtonTemplate)`
   letter-spacing: 0.02rem;
   color: ${colors.basic.white};
   background: ${colors.background.primary};
-  border: 0.3rem solid rgba(0, 0, 0, 0);
-  border-radius: 2rem;
+  ${ShadowEffect.secondary};
 
   &:hover {
-    ${ShadowEffectButton};
-    translate: 0 -0.2rem;
-    background: ${colors.accent.primary};
+    ${ShadowEffect.hover.secondary};
+  }
+
+  &:active {
+    ${ShadowEffect.active.secondary};
   }
 `

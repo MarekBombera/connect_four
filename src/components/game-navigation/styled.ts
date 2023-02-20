@@ -5,7 +5,7 @@ import { ButtonTemplate } from '~/features/ui/components/button/styled'
 import { colors } from '~/features/ui/theme/colors.style'
 import { mq } from '~/features/ui/theme/mq.style'
 import { typography } from '~/features/ui/theme/typography.style'
-import { ShadowEffectButton } from '~/features/ui/theme/utils/shadow-effect'
+import { ShadowEffect } from '~/features/ui/theme/utils/shadow-effect'
 
 export const StyledGameNavigation = styled.nav`
   align-self: end;
@@ -35,13 +35,15 @@ const Button = styled(ButtonTemplate)`
   letter-spacing: 0.02rem;
   color: ${colors.basic.white};
   background: ${colors.background.primary};
-  border: 0.3rem solid rgba(0, 0, 0, 0);
-  border-radius: 2rem;
+  ${ShadowEffect.secondary};
 
   &:hover {
-    ${ShadowEffectButton};
+    ${ShadowEffect.hover.secondary};
     background: ${colors.accent.primary};
-    translate: 0 -0.2rem;
+  }
+
+  &:active {
+    ${ShadowEffect.active.secondary};
   }
 `
 export const MenuButton = styled(Button)``
