@@ -13,7 +13,7 @@ export const InGameMenu = forwardRef<HTMLDivElement, Props>(
         <StyleGameMenu>
           <Title>Pause</Title>
           <Continue onClick={closeModal}>Continue game</Continue>
-          <Restart>Restart</Restart>
+          <Restart onClick={() => {}}>Restart</Restart>
           <Quit>Quit game</Quit>
         </StyleGameMenu>
       </Modal>
