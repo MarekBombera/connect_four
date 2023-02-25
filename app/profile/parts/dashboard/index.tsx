@@ -15,6 +15,7 @@ export const Dashboard: FC<Props> = ({}) => {
   return (
     <StyledDashboard>
       <Avatar
+        priority
         src={photoURL ?? ''}
         width={120}
         height={120}

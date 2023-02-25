@@ -3,8 +3,6 @@ import { createGlobalStyle } from 'styled-components'
 import { font } from './typography.style'
 
 export const GlobalStyles = createGlobalStyle`
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
-
   *,
   *::before,
   *::after {
