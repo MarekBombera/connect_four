@@ -2,6 +2,10 @@ import { GlobalStyles } from 'src/features/ui/theme/global.style'
 import StyledComponentsRegistry from 'src/features/ui/theme/registry'
 import { SpaceGroteskFont } from '~/features/ui/theme/fonts'
 
+export const metadata = {
+  title: 'Connect 4',
+}
+
 export default function RootLayout({
   children,
 }: {
