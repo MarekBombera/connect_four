@@ -1,6 +1,6 @@
 {
-  "name": "connect_four_copy",
-  "version": "0.1.0",
+  "name": "connect_four",
+  "version": "0.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -16,9 +16,9 @@
     "format:write": "prettier --write --list-different 'src/**/*.{ts,tsx}'"
   },
   "dependencies": {
-    "@next/font": "^13.1.6",
+    "@next/font": "^13.2.1",
     "firebase": "^9.17.1",
-    "next": "^13.1.6",
+    "next": "^13.2.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "styled-components": "^5.3.6"
